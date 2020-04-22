@@ -18,5 +18,5 @@ func calculate_move_velocity(
 	) -> Vector2:
 	var new_velocity: = linear_velocity
 	new_velocity.x = speed.x * direction.x
-	new_velocity.y += gravity
+	new_velocity.y += gravity * get_physics_process_delta_time()
 	return speed * velocity
